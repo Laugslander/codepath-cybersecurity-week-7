@@ -4,6 +4,7 @@ _CVE-2017-6817_
 _Affected versions 4.0 - 4.7.2, fixed in 4.2.13_  
 
 #### Steps
+- Sign in as an administrator
 - Create a new Post
 - Switch from Visual editing mode to Text (HTML) editing mode
 - Insert the malicious YouTube embed shortcode
@@ -26,6 +27,7 @@ _CVE-2015-5623_
 _Affected versions 4.0 - 4.2.2, fixed in 4.2.3_  
 
 #### Steps
+- Sign in as an administrator
 - Create a new Post  
 - Switch from Visual editing mode to Text (HTML) editing mode
 - Insert the malicious a href code
@@ -42,3 +44,23 @@ _Affected versions 4.0 - 4.2.2, fixed in 4.2.3_
  
 #### Walkthrough
 ![Walkthrough exploit 2](https://i.imgur.com/4nuw80g.gif)
+
+### Exploit 3: Authenticated Shortcode Tags Cross-Site Scripting (XSS)
+_CVE-2015-5714_  
+_Affected versions 4.0 - 4.3, fixed in 4.2.5_
+
+#### Steps
+- Sign in as an administrator
+- Create a new Post
+- Switch from Visual editing mode to Text (HTML) editing mode
+- Insert the malicious caption code
+
+#### References
+- https://wpvulndb.com/vulnerabilities/8186
+- https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5714
+- https://wordpress.org/news/2015/09/wordpress-4-3-1/
+- http://blog.checkpoint.com/2015/09/15/finding-vulnerabilities-in-core-wordpress-a-bug-hunters-trilogy-part-iii-ultimatum/
+- http://blog.knownsec.com/2015/09/wordpress-vulnerability-analysis-cve-2015-5714-cve-2015-5715/
+
+#### Walkthrough 
+![Walkthrough exploit 3](https://i.imgur.com/f9XWOUo.gif)
